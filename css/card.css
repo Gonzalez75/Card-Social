@@ -1,0 +1,44 @@
+.card{
+    position: relative;
+    display: flex;
+    min-height: 300px;
+    background-image: linear-gradient(43deg, #7A8C3A 25%, #E9E9E9, #737373, #0D0D0D);
+}
+
+.card::before, .card::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.card::before{
+    border-style: solid;
+    border-width: 0 0 50px 50px;
+    border-color: transparent transparent #fff transparent;
+    transition: border .25s;
+}
+
+.card::after{
+    content: 'Go';
+    bottom: 15px;
+    right: 15px;
+    color: #0D0D0D;
+    font-size: 21px;
+    opacity: 0;
+}
+
+.card:hover::before{
+    border-width: 0 0 100px 100px;
+}
+
+.card:hover::after{
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.cardtittle{
+    margin: auto;
+    font-size: 36px;
+}
+
